@@ -15,8 +15,35 @@ const config = {
     appId: "1:918965081471:web:edd756408b67c9c568364a"
 };
 
-firebase.initializeApp(config);
+//async bc we're making API request, userAuth library object, additionalData is any new data that we're goihg to pass in (iin the form of an object)
+//we'll only perform this function if user is logged in, that we get back a valid object
 
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+    if (!userAuth) return;
+  
+    const userRef = firestore.doc(`users/${userAuth.uid}`);
+  
+    const snapShot = await userRef.get();
+  
+    if (!snapShot.exists) {
+      const { displayName, email } = userAuth;
+      const createdAt = new Date();
+      try {
+        await userRef.set({
+          displayName,
+          email,
+          createdAt,
+          ...additionalData
+        });
+      } catch (error) {
+        console.log('error creating user', error.message);
+      }
+    }
+  
+    return userRef;
+};
+
+firebase.initializeApp(config);
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
