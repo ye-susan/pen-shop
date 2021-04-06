@@ -26,7 +26,7 @@ class SignIn extends React.Component {
         const { value, name } = event.target;
 
         //if name is 'password', the value will go to password, if name is 'email', will go to email accordingly
-        //this way, we can pass the same function, 'handleChange' for both <input>s
+        //this way, we can pass the same function, 'handleChange' for both <input>
         this.setState({ [name]: value })
     }
 
