@@ -7,6 +7,6 @@ const middlewares = [
   logger
 ];
 
-const store = createStore(rootReduceer, applyMiddleware(...middlewares))
+const store = createStore(rootReduceer, applyMiddleware(...middlewares));
 
 export default store;
