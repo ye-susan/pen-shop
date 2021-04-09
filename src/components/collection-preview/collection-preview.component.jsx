@@ -8,10 +8,9 @@ const CollectionPreview = ({ title, items }) => (
     <h1 className='title'>{title.toUpperCase()}</h1>
     <div className='preview'>
         { items
-            //make sure index is less than 4, since we only want 4 items to display per category
-            .filter((item, idx) => idx < 4)
-            .map(({ id, ...otherItemProps}) => (
-                <CollectionItem key={id} {...otherItemProps}/>
+          .filter((item, idx) => idx < 4)
+          .map( item => (
+            <CollectionItem key={item.id} item={item} />
         ))}
     </div>
   </div>

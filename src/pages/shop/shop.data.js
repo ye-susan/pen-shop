@@ -30,19 +30,19 @@ const SHOP_DATA = [
     routeName: "fountain",
     items: [
       {
-        id: 1,
+        id: 21,
         name: "LAMY Safari",
         imageUrl: "/images/pens/pens-ph.png",
         price: 220,
       },
       {
-        id: 2,
+        id: 22,
         name: "Noodler's Ink",
         imageUrl: "/images/pens/pens-ph.png",
         price: 110,
       },
       {
-        id: 3,
+        id: 23,
         name: "Jinhao Onyx",
         imageUrl: "/images/pens/pens-ph.png",
         price: 160,
@@ -55,19 +55,19 @@ const SHOP_DATA = [
     routeName: "vintage",
     items: [
       {
-        id: 1,
+        id: 31,
         name: "Waterman's",
         imageUrl: "/images/pens/pens-ph.png",
         price: 175,
       },
       {
-        id: 2,
+        id: 32,
         name: "Marathon",
         imageUrl: "/images/pens/pens-ph.png",
         price: 90,
       },
       {
-        id: 3,
+        id: 33,
         name: "Parker",
         imageUrl: "/images/pens/pens-ph.png",
         price: 90,
